@@ -36,7 +36,6 @@
         </ul>
     </div>
 </section>
-
 <section class="features">
     <div class="container">
         <h2 class="features-title">Что <b>выделяет</b> нас среди конкурентов?</h2>
