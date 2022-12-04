@@ -5,7 +5,7 @@ require('products_db_old.php');
 require('components/header.php');
 
 $id = $_GET['product_id'];
-
+6
 products_db.php → products_db_old.php
 @@ -1,10 +1,6 @@
 <?php
