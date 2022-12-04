@@ -1,7 +1,7 @@
 <?php
+require('abconnect.php');
+$result = $conn->query ("SELECT * FROM products");
 require('components/header.php');
-
-$title = 'Люстра Леопом';
-
-require('components/product_info.php');
+require('components/products_list.php');
 require('components/footer.php');
+?>
