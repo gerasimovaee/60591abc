@@ -7,13 +7,13 @@ switch ($_GET['page']){
         require "components/products_list.php";
     }
 
-        case 'product':{
-            require "components/product_info.php";
-        }
+    case 'product':{
+        require "components/product_info.php";
+    }
 
-        default:{
-            require('components/company_info.php');
-        }
+    default:{
+        require('components/company_info.php');
+    }
 }
 require('components/footer.php');
 ?>
