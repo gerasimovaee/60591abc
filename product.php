@@ -1,5 +1,6 @@
 <?php
-require('products_db.php');
+
+require('products_db_old.php');
 require('components/header.php');
 
 $id = $_GET['product_id'];
