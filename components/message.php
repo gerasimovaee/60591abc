@@ -3,10 +3,10 @@
 
         <p class="message">
             <?php
-            if ($msg){
-                echo ($msg);
-            }
-            if ($_SESSION['msg']){
+//            if ($msg){
+//                echo ($msg);
+//            }
+            if ($_SESSION['msg'] ?? null){
                 echo ($_SESSION['msg']);
                 $_SESSION['msg'] = null;
             }
