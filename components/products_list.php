@@ -1,4 +1,3 @@
-<?php
 <section class="catalog">
     <div class="container">
         <h1 class="catalog-title">Каталог товаров</h1>
@@ -12,10 +11,14 @@
                         <h3><?= $item['name'] ?></h3>
                         <p><?= $item['description'] ?></p>
                         <span class="price"><del><?= $item['price']*1.1 ?></del> <?= $item['price'] ?></span>
-                        <img src="<?= $item['image_URL'] ?>" width="156" height="120" alt="<?= $item['title'] ?>">
+                        <img src="<?= $item['image_url'] ?>" width="156" height="120" alt="<?= $item['title'] ?>">
                     </a>
                 </li>
+
+
             <?php }; ?>
+
+
         </ul>
     </div>
 </section>
