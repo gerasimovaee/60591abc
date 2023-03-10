@@ -1,4 +1,3 @@
-<?php
 <section class="catalog">
     <div class="container">
         <h1 class="catalog-title">Каталог товаров</h1>
@@ -15,7 +14,11 @@
                         <img src="<?= $item['image_URL'] ?>" width="156" height="120" alt="<?= $item['title'] ?>">
                     </a>
                 </li>
+
+
             <?php }; ?>
+
+
         </ul>
     </div>
 </section>

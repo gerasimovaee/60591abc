@@ -1,9 +1,18 @@
 <?php
+$conn = null;
 require ('dbconnect.php');
 require ('auth.php');
 require ('components/header.php');
 
-switch ($_GET['page']){
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
+
+switch ($_GET['page'] ?? null){
     case "catalog":{
         require "components/products_list.php";
         break;

@@ -25,8 +25,9 @@ if (isset($_POST["login"]) and $_POST["login"]!='')
                 $_SESSION['login'] = $_POST["login"];
                 $_SESSION['name'] = $row['name'];
                 $_SESSION['id'] = $row['id'];
-                //if ($row['is_teacher']==1) $_SESSION['teacher'] = true;
-                $msg = "Вы успешно вошли в систему";
+                $_SESSION['msg'] = "Вы успешно вошли в систему";
+                header('Location: /index.php?page=catalog');
+                exit( );
             }
         }
         else $msg = "Неправильное имя пользователя!";

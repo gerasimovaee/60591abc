@@ -16,8 +16,7 @@
             <li><a href="index.php?page=catalog">Каталог</a></li>
             <li><a href="delivery.html">Доставка</a></li>
             <li><a href="contacts.html">Контакты</a></li>
-            <li><a href="blog.html">Блог</a></li>
-                        <!--            <li><a href="blog.html">Блог</a></li>-->
+            <!--            <li><a href="blog.html">Блог</a></li>-->
             <?php
             if ($_SESSION['login']) {
 //                echo ('<li><a href="product_add.php">Добавить продукт</a></li>');
