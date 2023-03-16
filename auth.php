@@ -44,9 +44,6 @@ if (isset($_POST["login"]) and $_POST["login"]!='')
         header('Location: /index.php?page=login');
         exit( );
     }
-
-
-
 }
 
 if (isset($_GET["logout"]))
