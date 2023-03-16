@@ -1,7 +1,5 @@
 <?php
 session_start(["use_strict_mode" => true]);
-
-
 if (isset($_POST["login"]) and $_POST["login"]!='')
 {
     try {
@@ -12,7 +10,6 @@ if (isset($_POST["login"]) and $_POST["login"]!='')
         //$_SESSION['msg'] = "Вы успешно вошли в систему";
         // return generated id
         // $id = $pdo->lastInsertId('id');
-
     } catch (PDOexception $error) {
         $_SESSION['msg'] = "Ошибка аутентификации: " . $error->getMessage();
         header('Location: /index.php?page=login');
@@ -44,11 +41,7 @@ if (isset($_POST["login"]) and $_POST["login"]!='')
         header('Location: /index.php?page=login');
         exit( );
     }
-
-
-
 }
-
 if (isset($_GET["logout"]))
 {
     session_unset();
@@ -57,6 +50,4 @@ if (isset($_GET["logout"]))
     header('Location: /index.php?page=login');
     exit( );
 }
-
-
 ?>
