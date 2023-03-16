@@ -1,33 +1,40 @@
 <?php
-$conn = null;
-require ('dbconnect.php');
-require ('auth.php');
-require ('components/header.php');
+require('dbconnect.php');
+require('auth.php');
+require('components/header.php');
 
-function debug_to_console($data) {
-    $output = $data;
-    if (is_array($output))
-        $output = implode(',', $output);
-
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-}
-
-switch ($_GET['page'] ?? null){
-    case "catalog":{
+switch ($_GET['page']) {
+    case "catalog":
+    {
         require "components/products_list.php";
         break;
     }
 
-    case "product":{
+    case "product":
+    {
         require "components/product_info.php";
         break;
     }
-    case "login":{
+    case "login":
+    {
         require "components/login_form.php";
         break;
     }
-
-    default:{
+    case "productform":
+    {
+        if ($_SESSION['is_admin']) {
+            require "components/product_form.php";
+            break;
+        }
+        else
+        {
+            $_SESSION['msg'] = "У вас нет доступа к этой странице!";
+            header('Location: /index.php');
+            exit();
+        }
+    }
+    default:
+    {
         require('components/company_info.php');
     }
 }
