@@ -15,7 +15,7 @@
         <ul class="navigation-list">
             <li><a href="index.php?page=catalog">Каталог</a></li>
             <?php if ($_SESSION['is_admin']) { ?>
-                <li><a href="index.php?page=productform">Добавить товар</a></li>
+                <li><a href="index.php?page=product_form">Добавить товар</a></li>
             <?php } ?>
             <li><a href="index.php?page=delivery">Доставка</a></li>
             <li><a href="contacts.html">Контакты</a></li>
