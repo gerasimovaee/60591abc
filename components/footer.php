@@ -2,7 +2,7 @@
     <div class="container">
         <p class="copyright">© Кекс, 2019</p>
         <ul class="navigation-list">
-            <li><a href="catalog.php">Каталог</a></li>
+            <li><a href="index.php?page=catalog">Каталог</a></li>
             <li><a href="delivery.html">Доставка</a></li>
             <li><a href="contacts.html">Контакты</a></li>
         </ul>
@@ -24,6 +24,9 @@
             </li>
         </ul>
     </div>
+</footer>
+</body>
+</html>
 </footer>
 </body>
 </html>
