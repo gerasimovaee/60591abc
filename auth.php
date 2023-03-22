@@ -29,7 +29,7 @@ if (isset($_POST["login"]) and $_POST["login"]!='')
         }
         else {
             // успешная аутентификация
-         //   var_dump($row);
+//                    var_dump($row);
             $_SESSION['login'] = $_POST["login"];
             $_SESSION['name'] = $row['name'];
             $_SESSION['id'] = $row['id'];
@@ -44,6 +44,9 @@ if (isset($_POST["login"]) and $_POST["login"]!='')
         header('Location: /index.php?page=login');
         exit( );
     }
+
+
+
 }
 
 if (isset($_GET["logout"]))
