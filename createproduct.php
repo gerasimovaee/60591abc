@@ -21,7 +21,7 @@ try {
 
     }
 
-    $sql = 'INSERT INTO products (name, description, price, image_url)  VALUES (:name, :description, :price, :img_url)';
+    $sql = 'INSERT INTO products (name, description, price, image_URL)  VALUES (:name, :description, :price, :image_URL)';
     $stmt = $conn->prepare($sql);
     $stmt->bindValue(':name', $_POST['name']);
     $stmt->bindValue(':description', $_POST['description']);
