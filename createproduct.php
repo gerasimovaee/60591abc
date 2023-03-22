@@ -21,12 +21,12 @@ try {
 
     }
 
-    $sql = 'INSERT INTO products (name, description, price, image_URL)  VALUES (:name, :description, :price, :image_URL)';
+    $sql = 'INSERT INTO products (name, description, price, image_URL)  VALUES (:name, :description, :price, :img_url)';
     $stmt = $conn->prepare($sql);
     $stmt->bindValue(':name', $_POST['name']);
     $stmt->bindValue(':description', $_POST['description']);
     $stmt->bindValue(':price', $_POST['price']);
-    $stmt->bindValue(':img_URL', 'img/'.$filename);
+    $stmt->bindValue(':img_url', 'img/'.$filename);
     echo ($stmt->queryString);
     $stmt->execute();
 } catch (PDOexception $error) {
