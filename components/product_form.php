@@ -19,7 +19,19 @@
                 <input type="file" name="picture[]" id="id4" multiple>
             </p>
             <p>
-            <p><input type="submit" value="Создать"></p>
+            <p><input type="button" value="Создать" onclick="validate(this.form)"></p>
         </form>
     </div>
 </section>
+<script>
+    function validate(xxx) {
+        if (xxx.name.value === '')
+            alert("Пожалуйста, введите имя!");
+        else if (!Number.isInteger(parseInt(xxx.price.value)) || (String(parseInt(xxx.price.value)) !== xxx.price.value) || parseInt(xxx.price.value)<0)
+            alert("Цена должна быть целым положительным числом!");
+        else {
+            alert("Форма заполнена корректно.");
+            xxx.submit();
+        }
+    }
+</script>
