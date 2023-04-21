@@ -16,7 +16,7 @@
             </p>
             <p>
                 <label for="id4">Изображение:</label>
-                <input type="file" name="picture[]" id="id4" multiple>
+                <input type="file" name="files" id="id4" multiple>
             </p>
             <p>
             <p><input type="button" value="Создать" onclick="validate(this.form)"></p>
@@ -27,11 +27,25 @@
     function validate(xxx) {
         if (xxx.name.value === '')
             alert("Пожалуйста, введите имя!");
-        else if (!Number.isInteger(parseInt(xxx.price.value)) || (String(parseInt(xxx.price.value)) !== xxx.price.value) || parseInt(xxx.price.value)<0)
+        else if (!Number.isInteger(parseInt(xxx.price.value)) || (String(parseInt(xxx.price.value)) !== xxx.price.value) || parseInt(xxx.price.value) < 0)
             alert("Цена должна быть целым положительным числом!");
+        else if (xxx.files.value === "")
+            alert("Файл отсутствует, загрузите файл!");
+        else if (xxx.files.value.match(/\.([a-zA-Z]+)$/i)[1] !== "png")
+            alert("Файл должен быть с расширением: png");
         else {
-            alert("Форма заполнена корректно.");
+            alert("Форма заполнена корректно");
             xxx.submit();
         }
+        //      else {
+        //     ext = file.value.match(/\.([a-zA-Z]+)$/i);
+        //     if (ext[1] !== 'png') {
+        //         alert('Файл должен быть с расширением: png');
+        //     }
+        //     else {
+        //         alert("Форма заполнена корректно.");
+        //         xxx.submit();
+        //     }
     }
 </script>
+
